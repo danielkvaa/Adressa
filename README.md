@@ -50,10 +50,6 @@ Gå til `http://localhost:3000` i nettleseren.
 
 ---
 
-##  Demo
-
-_(Valgfritt)_  
-Lenke til en eventuell live-demo, f.eks. via Vercel eller Netlify.
 
 ---
 
