@@ -2,7 +2,7 @@
 
 Dette prosjektet er utviklet som en del av en teknisk caseoppgave til et intervju. Oppgaven gikk ut på å implementere en salgsplakat inne i en artikkel som blir synlig etter at brukeren har scrollet forbi cirka fire avsnitt.
 
-## 📝 Oppgavebeskrivelse
+##  Oppgavebeskrivelse
 
 Når en leser kommer inn på en artikkel, skal denne umiddelbart se åpen ut, men når leseren scroller nedover vil den bli låst etter ca 4 avsnitt og leseren vil ikke få lest innholdet. En salgsplakat blir da synlig. Du bestemmer selv design, format og plassering.
 
@@ -11,7 +11,7 @@ Når en leser kommer inn på en artikkel, skal denne umiddelbart se åpen ut, me
 - Call-to-action (f.eks. abonner-knapp)
 - Grafisk element (statisk eller animert)
 
-## 🛠 Teknologier brukt
+##  Teknologier brukt
 
 - [Next.js](https://nextjs.org/)
 - React
@@ -19,7 +19,7 @@ Når en leser kommer inn på en artikkel, skal denne umiddelbart se åpen ut, me
 - Lottie (for animasjon)
 - Mock API / statisk JSON-data (for produktinformasjon)
 
-## 🚀 Kom i gang
+##  Kom i gang
 
 1. **Installer avhengigheter**
 
@@ -36,12 +36,12 @@ Gå til `http://localhost:3000` for å se prosjektet i aksjon.
 
 
 
-## 🔗 Lenke til deployet versjon / demo
+##  Lenke til deployet versjon / demo
 
 > _(valgfritt)_ Legg til lenke til Vercel, Netlify eller annen live-demo dersom du har lastet det opp.
 
 
-## 🐛 Feilsøking ved installasjon
+##  Feilsøking ved installasjon
 
 Dersom du får feil under `npm install`, som f.eks:
 
