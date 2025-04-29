@@ -2,13 +2,13 @@
 ---
 
 ```markdown
-# 💼 Salgsplakat i artikkel – Intervjuoppgave
+#  Salgsplakat i artikkel – Intervjuoppgave
 
 Dette prosjektet er utviklet som en del av en teknisk caseoppgave til intervju. Oppgaven gikk ut på å implementere en salgsplakat som vises inne i en artikkel etter at brukeren har scrollet forbi omtrent fire avsnitt.
 
 ---
 
-## 📝 Oppgavebeskrivelse
+##  Oppgavebeskrivelse
 
 Når en leser åpner en artikkel, skal innholdet i utgangspunktet fremstå åpent. Etter at brukeren har scrollet forbi omtrent fire avsnitt, skal videre innhold låses og en salgsplakat vises i grensesnittet. Design, plassering og format er valgt fritt.
 
@@ -20,7 +20,7 @@ Når en leser åpner en artikkel, skal innholdet i utgangspunktet fremstå åpen
 
 ---
 
-## 🧰 Teknologier benyttet
+##  Teknologier benyttet
 
 - [Next.js](https://nextjs.org/)
 - React
@@ -30,7 +30,7 @@ Når en leser åpner en artikkel, skal innholdet i utgangspunktet fremstå åpen
 
 ---
 
-## 🚀 Kom i gang
+##  Kom i gang
 
 ### 1. Installer avhengigheter
 
@@ -50,14 +50,14 @@ Gå til `http://localhost:3000` i nettleseren.
 
 ---
 
-## 🔗 Demo
+##  Demo
 
 _(Valgfritt)_  
 Lenke til en eventuell live-demo, f.eks. via Vercel eller Netlify.
 
 ---
 
-## 🛠 Feilsøking – installasjon
+##  Feilsøking – installasjon
 
 Dersom du får en feil som:
 
@@ -113,7 +113,7 @@ Det er implementert en **fallback-mekanisme** som manuelt evaluerer komponentens
 
 ---
 
-## 👤 Utviklet av
+##  Utviklet av
 
 **Daniel Kvålshagen**
 ```
