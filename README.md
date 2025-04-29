@@ -1,96 +1,125 @@
-# Salgsplakat i Artikkel – Intervjuoppgave
+Her er hele teksten – klar til å **kopieres og limes rett inn i `README.md`**:
 
-Dette prosjektet er utviklet som en del av en teknisk caseoppgave til et intervju. Oppgaven gikk ut på å implementere en salgsplakat inne i en artikkel som blir synlig etter at brukeren har scrollet forbi cirka fire avsnitt.
+---
 
-##  Oppgavebeskrivelse
+```markdown
+# 💼 Salgsplakat i artikkel – Intervjuoppgave
 
-Når en leser kommer inn på en artikkel, skal denne umiddelbart se åpen ut, men når leseren scroller nedover vil den bli låst etter ca 4 avsnitt og leseren vil ikke få lest innholdet. En salgsplakat blir da synlig. Du bestemmer selv design, format og plassering.
+Dette prosjektet er utviklet som en del av en teknisk caseoppgave til intervju. Oppgaven gikk ut på å implementere en salgsplakat som vises inne i en artikkel etter at brukeren har scrollet forbi omtrent fire avsnitt.
+
+---
+
+## 📝 Oppgavebeskrivelse
+
+Når en leser åpner en artikkel, skal innholdet i utgangspunktet fremstå åpent. Etter at brukeren har scrollet forbi omtrent fire avsnitt, skal videre innhold låses og en salgsplakat vises i grensesnittet. Design, plassering og format er valgt fritt.
 
 ### Krav til salgsplakaten:
-- Produktnavn, pris første måned og full pris (hentet fra eksternt API)
-- Call-to-action (f.eks. abonner-knapp)
-- Grafisk element (statisk eller animert)
 
-##  Teknologier brukt
+- Produktnavn, pris første måned og fullpris (hentet fra eksternt API)
+- Call to action-element (f.eks. abonner-knapp)
+- Et grafisk element (statisk eller animert)
+
+---
+
+## 🧰 Teknologier benyttet
 
 - [Next.js](https://nextjs.org/)
 - React
 - Tailwind CSS
 - Lottie (for animasjon)
-- Mock API / statisk JSON-data (for produktinformasjon)
+- REST API (produktdata)
 
-##  Kom i gang
+---
 
-1. **Installer avhengigheter**
+## 🚀 Kom i gang
 
+### 1. Installer avhengigheter
+
+```bash
 npm install
+```
 
+### 2. Start utviklingsserver
 
-2. **Start utviklingsserver**
-
+```bash
 npm run dev
+```
 
+### 3. Åpne prosjektet
 
-3. **Åpne i nettleser**
-Gå til `http://localhost:3000` for å se prosjektet i aksjon.
+Gå til `http://localhost:3000` i nettleseren.
 
+---
 
+## 🔗 Demo
 
-##  Lenke til deployet versjon / demo
+_(Valgfritt)_  
+Lenke til en eventuell live-demo, f.eks. via Vercel eller Netlify.
 
-> _(valgfritt)_ Legg til lenke til Vercel, Netlify eller annen live-demo dersom du har lastet det opp.
+---
 
+## 🛠 Feilsøking – installasjon
 
-##  Feilsøking ved installasjon
+Dersom du får en feil som:
 
-Dersom du får feil under `npm install`, som f.eks:
-
+```bash
 npm ERR! ERESOLVE could not resolve
+```
 
 eller
 
+```bash
 sh: node_modules/.bin/next: Permission denied
+```
 
 følg disse trinnene:
 
 ### 1. Slett tidligere avhengigheter
 
+```bash
 rm -rf node_modules package-lock.json
+```
 
+### 2. Reinstaller med eldre dependency-håndtering
 
-### 2. Installer med `--legacy-peer-deps`
-
-Dette løser typiske avhengighetskonflikter med React-versjoner og tredjepartsbiblioteker.
-
-
+```bash
 npm install --legacy-peer-deps
+```
 
+### 3. Gi kjøretilgang til Next.js-binæren (dersom nødvendig)
 
-### 3. Gi kjøretilgang til Next.js (dersom nødvendig)
-
-Hvis du får en feilmelding om "Permission denied" på `next`, kjør:
-
+```bash
 chmod +x node_modules/.bin/next
+```
 
 ### 4. Kjør prosjektet
 
+```bash
 npm run dev
-
-Åpne deretter i nettleseren:  
-[http://localhost:3000](http://localhost:3000)
+```
 
 ---
 
-Dersom problemet vedvarer, sjekk at du har riktig versjon av Node.js installert (anbefalt: v18.x eller nyere).
+## ⚠️ Observasjon: Uregelmessig initial visning av paywall
 
-🔎 Observasjon: Uregelmessig initial visning av paywall-komponenten
-Ved førstegangsinnlasting kan det i enkelte tilfeller observeres at paywall-komponenten ikke vises umiddelbart etter at brukeren har scrollet forbi de første fire avsnittene, slik den er ment å gjøre.
+Ved førstegangsinnlasting kan det i enkelte tilfeller observeres at paywallen **ikke vises umiddelbart** etter at brukeren har scrollet forbi de første fire avsnittene.
 
-Mulig årsak
-Den sannsynlige årsaken er en tidsmessig forskyvning mellom DOM-rendering og aktivering av IntersectionObserver. Dersom komponenten allerede er synlig i viewport på det tidspunktet observeren initialiseres, vil ikke isIntersecting nødvendigvis trigge som forventet. Dette gjelder særlig ved rask innlasting eller i visningsvinduer med begrenset høyde.
+### Mulig årsak
 
-Tiltak og løsning
-Det er implementert en fallback-mekanisme som manuelt evaluerer komponentens posisjon etter initial innlasting. Dersom observeren ikke har trigget, vil denne sjekken aktivere visningen av paywallen dersom betingelsene er oppfylt. Dette gir en mer robust og forutsigbar brukeropplevelse.
+Dette skyldes trolig en **tidsmessig forskyvning mellom DOM-rendering og aktivering av `IntersectionObserver`**. Dersom komponenten allerede er synlig i viewport i det observeren etableres, vil `isIntersecting` ikke nødvendigvis trigge som forventet – særlig i raske lastesituasjoner eller ved begrenset visningshøyde.
+
+### Tiltak og løsning
+
+Det er implementert en **fallback-mekanisme** som manuelt evaluerer komponentens posisjon kort tid etter initial innlasting. Dersom observeren ikke har trigget, vil denne sjekken aktivere visningen av paywallen. Dette gir en mer robust og forutsigbar brukeropplevelse.
+
+---
 
 ## 👤 Utviklet av
-Daniel Kvålshagen
+
+**Daniel Kvålshagen**
+```
+
+---
+
+Bare lim dette inn i `README.md`, så er du helt klar for intervjuet 👌  
+Trenger du også en kort muntlig forklaring du kan bruke når du viser det fram?
