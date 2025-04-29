@@ -83,5 +83,14 @@ npm run dev
 
 Dersom problemet vedvarer, sjekk at du har riktig versjon av Node.js installert (anbefalt: v18.x eller nyere).
 
+🔎 Observasjon: Uregelmessig initial visning av paywall-komponenten
+Ved førstegangsinnlasting kan det i enkelte tilfeller observeres at paywall-komponenten ikke vises umiddelbart etter at brukeren har scrollet forbi de første fire avsnittene, slik den er ment å gjøre.
+
+Mulig årsak
+Den sannsynlige årsaken er en tidsmessig forskyvning mellom DOM-rendering og aktivering av IntersectionObserver. Dersom komponenten allerede er synlig i viewport på det tidspunktet observeren initialiseres, vil ikke isIntersecting nødvendigvis trigge som forventet. Dette gjelder særlig ved rask innlasting eller i visningsvinduer med begrenset høyde.
+
+Tiltak og løsning
+Det er implementert en fallback-mekanisme som manuelt evaluerer komponentens posisjon etter initial innlasting. Dersom observeren ikke har trigget, vil denne sjekken aktivere visningen av paywallen dersom betingelsene er oppfylt. Dette gir en mer robust og forutsigbar brukeropplevelse.
+
 ## 👤 Utviklet av
 Daniel Kvålshagen
