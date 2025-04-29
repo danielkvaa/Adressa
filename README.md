@@ -1,4 +1,4 @@
-# 📢 Salgsplakat i Artikkel – Intervjuoppgave
+# Salgsplakat i Artikkel – Intervjuoppgave
 
 Dette prosjektet er utviklet som en del av en teknisk caseoppgave til et intervju. Oppgaven gikk ut på å implementere en salgsplakat inne i en artikkel som blir synlig etter at brukeren har scrollet forbi cirka fire avsnitt.
 
