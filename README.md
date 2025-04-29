@@ -1,4 +1,3 @@
-Her er hele teksten – klar til å **kopieres og limes rett inn i `README.md`**:
 
 ---
 
@@ -120,6 +119,3 @@ Det er implementert en **fallback-mekanisme** som manuelt evaluerer komponentens
 ```
 
 ---
-
-Bare lim dette inn i `README.md`, så er du helt klar for intervjuet 👌  
-Trenger du også en kort muntlig forklaring du kan bruke når du viser det fram?
