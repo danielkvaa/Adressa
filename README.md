@@ -109,9 +109,6 @@ Det er implementert en **fallback-mekanisme** som manuelt evaluerer komponentens
 
 ---
 
-##  Utviklet av
+##  Stolt Utviklet av
 
 **Daniel Kvålshagen**
-```
-
----
